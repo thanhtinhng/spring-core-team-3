@@ -1,4 +1,4 @@
-package org.example.ORM.hibernate;
+package org.example.ORM.entity_manager;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;

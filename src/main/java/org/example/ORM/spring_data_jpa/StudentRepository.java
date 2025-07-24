@@ -1,10 +1,9 @@
 package org.example.ORM.spring_data_jpa;
 
-import org.example.ORM.hibernate.Student;
+import org.example.ORM.entity_manager.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
