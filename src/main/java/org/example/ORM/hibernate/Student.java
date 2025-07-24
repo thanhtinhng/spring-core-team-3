@@ -1,4 +1,4 @@
-package org.example.ORM;
+package org.example.ORM.hibernate;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
@@ -17,6 +17,9 @@ public class Student {
     @NotBlank(message = "Tên không được để trống")  // Không null và không toàn khoảng trắng
     @Size(min = 2, max = 50, message = "Tên phải từ 2 đến 50 ký tự")
     private String name;
+
+    @NotBlank
+    private String email;
 
     @NotNull
     @Max(value = 100, message = "Tuổi tối đa là 100")
@@ -54,6 +57,14 @@ public class Student {
                 ", age=" + age +
                 ", classRoom=" + (classRoom != null ? classRoom.getName() : "null") +
                 '}';
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
 
