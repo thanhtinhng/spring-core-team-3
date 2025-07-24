@@ -1,6 +1,8 @@
-package org.example.ORM;
+package org.example.ORM.hibernate;
 
-import jakarta.persistence.*;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 public class TestOrmCRUD {
     public static void main(String[] args) {

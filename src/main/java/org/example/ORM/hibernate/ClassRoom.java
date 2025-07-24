@@ -1,6 +1,7 @@
-package org.example.ORM;
+package org.example.ORM.hibernate;
 
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity

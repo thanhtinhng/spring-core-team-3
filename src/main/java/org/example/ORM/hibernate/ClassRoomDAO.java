@@ -1,6 +1,7 @@
-package org.example.ORM;
+package org.example.ORM.hibernate;
 
-import jakarta.persistence.*;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 
 public class ClassRoomDAO {
     private EntityManager entityManager;    // khởi tạo EntityManager – đối tượng trung tâm để thao tác với database trong JPA
