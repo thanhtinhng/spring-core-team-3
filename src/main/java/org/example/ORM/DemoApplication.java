@@ -21,22 +21,5 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-//    @Bean
-//    CommandLineRunner initDatabase(StudentService studentService) {
-//        return args -> {
-//            System.out.println("Đang khởi tạo dữ liệu mẫu...");
-//
-//            Student student1 = new Student();
-//            student1.setName("Nguyen Van A");
-//            student1.setEmail("22521483.gm.uit.edu.vn");
-//            studentService.addStudent(student1);
-//
-//            Student student2 = new Student();
-//            student1.setName("Nguyen Van B");
-//            student1.setEmail("123456.gm.uit.edu.vn");
-//            studentService.addStudent(student2);
-//
-//            System.out.println("Đã tạo xong dữ liệu mẫu.");
-//        };
-//    }
+
 }

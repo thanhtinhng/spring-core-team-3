@@ -20,7 +20,7 @@ public class StudentController {
     }
 
     @GetMapping("/email")
-    public Optional<Student> getByEmail(@RequestParam String email) {
+    public Optional<Student> getByEmail(@RequestParam("email") String email) {
         return studentService.getStudentByEmail(email);
     }
 
