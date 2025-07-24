@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="loggingAspect" class="org.example.AOP.byxmlbased.LoggingAspect"/>
+    <bean id="myService" class="org.example.AOP.byxmlbased.MyService"/>
+
+<!--    app config-->
+    <aop:config>
+        <aop:aspect ref="loggingAspect">
+            <aop:pointcut id="sayHelloPoincut" expression="execution(* org.example.AOP.byxmlbased.MyService.sayHello(..))"/>
+
+            <aop:before method="logBefore" pointcut-ref="sayHelloPoincut"/>
+
+            <aop:after method="logAfter" pointcut-ref="sayHelloPoincut"/>
+
+            <aop:around method="logAround" pointcut-ref="sayHelloPoincut"/>
+        </aop:aspect>
+
+    </aop:config>
+
+</beans>
