@@ -1,0 +1,5 @@
+commit lan 1 sau do tao pull request
+
+commit lan 2 su dung --amend
+
+commit lan 3 su dung --amend
